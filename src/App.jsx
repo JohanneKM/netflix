@@ -30,7 +30,11 @@ function App() {
 
   // J'utilise map créer un nouveau tableau d'objets [ [url1, url2, etc] , [url3, url 4, url 5, etc], [url 6, url7, url 8, etc], etc]
 
-  return <>{tabMadeWithMap}</>;
+  return (
+    <>
+      <Section />
+    </>
+  );
 }
 
 export default App;
