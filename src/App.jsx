@@ -10,20 +10,30 @@ function App() {
   // J'utilise map pour transformer Netflix
 
   const tabMadeWithMap = netflix.map((elem) => {
-    return <p> {elem.images[0]} </p>;
+    // console.log(elem);
+
+    return <p> {elem.category} </p>;
+  });
+
+  // TEST TEST TEST
+  const arrayOfImages = netflix[0].images;
+
+  const firstUrl = arrayOfImages[0];
+  const secondUrl = arrayOfImages[1];
+
+  // J'utilise map créer un nouveau tableau d'objets [ [url1, url2, etc] , [url3, url 4, url 5, etc], [url 6, url7, url 8, etc], etc]
+
+  const arrayOfImagesMadeWithMap = netflix.map((elem) => {
+    console.log(elem);
+    return <p> {elem.images} </p>;
   });
 
   return (
     <>
-      <p> {tabMadeWithMap[0]} </p>
-      <p> {'"' + tabMadeWithMap[0] + '"'}</p>
-      <img
-        src="https://res.cloudinary.com/lereacteur-apollo/image/upload/v1643642943/react-new-exercices/netflix2022/reprendre%20avec/AAAABd4eOiOZFaZT1-9l68Ra0uC-4kl3zMSPkeA5TyDu8v_KNgAAvifmM8boe5G2kexKSdk2uznXcDIJIlBoz4RA6p-q0_E_xg9maq.webp"
-        alt="img-netflix"
-      />
-      <img src={tabMadeWithMap[0]} alt="img-netflix" />;
-      <img src={"} {tabMadeWithMap[0]} {"} alt="img-netflix" />;
-      <img src="{tabMadeWithMap[0]}" alt="img-netflix" />;
+      {tabMadeWithMap[0]};
+      <img src={firstUrl} alt="img-netflix" />
+      <img src={secondUrl} alt="img-netflix" />
+      {arrayOfImagesMadeWithMap[0]};
     </>
   );
 }
