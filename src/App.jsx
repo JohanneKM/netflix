@@ -33,7 +33,8 @@ function App() {
       {tabMadeWithMap[0]};
       <img src={firstUrl} alt="img-netflix" />
       <img src={secondUrl} alt="img-netflix" />
-      {arrayOfImagesMadeWithMap[0]};
+      {/* Je veux récupérer seulement le premier url : netflix[0].images[0] */}
+      {arrayOfImagesMadeWithMap[0][0]};
     </>
   );
 }
